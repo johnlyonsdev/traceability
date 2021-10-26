@@ -17,9 +17,14 @@ app.get('/', (req, res) => {
     rollbar.info('html file served successfully')
 })
 
+app.get('/',function(req,res) {
+    res.sendFile(path.join(__dirname, '/tictac.js'));
+  });
+  
+
 let items = []
 
-app.post('/api/todo', (req, res) => {
+app.post('/api/student', (req, res) => {
     let {name} = req.body
     
 
