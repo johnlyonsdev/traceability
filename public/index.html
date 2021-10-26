@@ -32,7 +32,7 @@
                     })
                 })
                 .catch(err => {
-                    nameInput.value = ''
+                    todoInput.value = ''
 
                     const notif = document.createElement('aside')
                     notif.innerHTML = `<p>${err.response.data}</p>
