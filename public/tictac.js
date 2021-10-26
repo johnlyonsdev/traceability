@@ -181,5 +181,5 @@
             $(this).remove();
         }
       
-      
-        $("#start-game").on("click", startGame);
+      var buttonS = document.querySelector('#start')
+        buttonS.addEventListener("click", startGame);
