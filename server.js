@@ -17,8 +17,9 @@ app.get('/', (req, res) => {
     rollbar.info('html file served successfully')
 })
 
-app.get('/',function(req,res) {
-    res.sendFile(path.join(__dirname, '/tictac.js'));
+app.get('/js',function(req,res) {
+    res.sendFile(path.join(__dirname, '/public/tictac.js'));
+    rollbar.info('Loaded tictacjs successfully')
   });
   
 

@@ -1,4 +1,7 @@
 /* Tic-Tac Javascript */
+
+const Rollbar = require("rollbar");
+
       
       
         // The board is a simple 9-element array of null-for-empty, "X", or "O"
@@ -170,6 +173,9 @@
       
       
         function startGame(evt) {
+            console.log('Button Clicked')
+            Rollbar.log('Button clicked on successfully')
+
             // Handle start-game button
       
             initializeBoard();
@@ -181,5 +187,5 @@
             $(this).remove();
         }
       
-      var buttonS = document.querySelector('#start')
+      let buttonS = document.querySelector('#start-game')
         buttonS.addEventListener("click", startGame);
